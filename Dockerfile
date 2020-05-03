@@ -10,5 +10,4 @@ WORKDIR /usr/src
 COPY app/ /usr/src/
 RUN npm install --production
 EXPOSE 80
-#ENTRYPOINT [ "/usr/local/bin/node", "index.js" ]
 CMD ["supervisord", "-c", "/etc/supervisor.conf"]
